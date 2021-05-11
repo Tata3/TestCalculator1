@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="332dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="24dp"
+        android:text="Hello World!"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/digit1_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:onClick="onDigitClicked"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/digit2_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="onDigitClicked"
+        android:text="2"
+        app:layout_constraintEnd_toStartOf="@+id/digit3_button"
+        app:layout_constraintStart_toEndOf="@+id/digit1_button"
+        app:layout_constraintTop_toTopOf="@+id/digit1_button" />
+
+    <Button
+        android:id="@+id/digit3_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:onClick="onDigitClicked"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/digit2_button" />
+
+    <Button
+        android:id="@+id/digit4_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="onDigitClicked"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="@+id/digit1_button"
+        app:layout_constraintTop_toBottomOf="@+id/digit1_button" />
+
+    <Button
+        android:id="@+id/digit5_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onDigitClicked"
+        android:text="5"
+        app:layout_constraintStart_toStartOf="@+id/digit2_button"
+        app:layout_constraintTop_toTopOf="@+id/digit4_button" />
+
+    <Button
+        android:id="@+id/digit6_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onDigitClicked"
+        android:text="6"
+        app:layout_constraintStart_toStartOf="@+id/digit3_button"
+        app:layout_constraintTop_toTopOf="@+id/digit5_button" />
+
+    <Button
+        android:id="@+id/digit7_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="onDigitClicked"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="@+id/digit4_button"
+        app:layout_constraintTop_toBottomOf="@+id/digit4_button" />
+
+    <Button
+        android:id="@+id/digit8_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onDigitClicked"
+        android:text="8"
+        app:layout_constraintStart_toStartOf="@+id/digit5_button"
+        app:layout_constraintTop_toTopOf="@+id/digit7_button" />
+
+    <Button
+        android:id="@+id/digit9_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onDigitClicked"
+        android:text="9"
+        app:layout_constraintStart_toStartOf="@+id/digit6_button"
+        app:layout_constraintTop_toTopOf="@+id/digit8_button" />
+
+    <Button
+        android:id="@+id/digit0_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="onDigitClicked"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/digit9_button"
+        app:layout_constraintStart_toStartOf="@+id/digit8_button"
+        app:layout_constraintTop_toBottomOf="@+id/digit8_button" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clearAll"
+        android:text="очистить"
+        app:layout_constraintEnd_toStartOf="@+id/digit0_button"
+        app:layout_constraintStart_toStartOf="@+id/digit7_button"
+        app:layout_constraintTop_toTopOf="@+id/digit0_button" />
+
+    <Button
+        android:id="@+id/result_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="showResult"
+        android:text="="
+        app:layout_constraintEnd_toEndOf="@+id/digit9_button"
+        app:layout_constraintStart_toStartOf="@+id/digit7_button"
+        app:layout_constraintTop_toBottomOf="@+id/digit0_button" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="onPlusClicked"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="@+id/result_button"
+        app:layout_constraintStart_toStartOf="@+id/delete_button"
+        app:layout_constraintTop_toBottomOf="@+id/result_button" />
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onMinusClicked"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/digit9_button"
+        app:layout_constraintStart_toStartOf="@+id/result_button"
+        app:layout_constraintTop_toTopOf="@+id/plus_button" />
+
+    <Button
+        android:id="@+id/mul_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="onMulClicked"
+        android:text="*"
+        app:layout_constraintStart_toStartOf="@+id/plus_button"
+        app:layout_constraintTop_toBottomOf="@+id/plus_button" />
+
+    <Button
+        android:id="@+id/div_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onDivClicked"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="@+id/minus_button"
+        app:layout_constraintTop_toTopOf="@+id/mul_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
